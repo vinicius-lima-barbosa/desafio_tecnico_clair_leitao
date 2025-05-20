@@ -13,7 +13,7 @@ const MOVIE_POSTER = import.meta.env.VITE_TMDB_API_MOVIE_IMAGE;
 
 const MovieCard = ({ movie }) => {
   return (
-    <Col xs={6} sm={4} md={3} lg={2}>
+    <Col lg={2} md={2} sm={3} xs={5}>
       <MovieLink to={`/movie/${movie.id}`}>
         <MovieCardStyled>
           <MovieImage
