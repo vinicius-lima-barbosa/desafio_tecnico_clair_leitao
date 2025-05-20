@@ -336,7 +336,7 @@ export const StyledFormRange = styled.input.attrs({ type: "range" })`
   width: 100%;
   margin-top: 0.75rem;
   background: transparent;
-  -webkit-appearance: none;
+  appearance: none;
 
   &::-webkit-slider-runnable-track {
     height: 6px;
