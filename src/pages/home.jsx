@@ -19,7 +19,6 @@ const Home = () => {
     const fetchMovies = async () => {
       try {
         const response = await tmdb.getMovies(page);
-        console.log(response.data);
         setMovies(response?.data?.results || []);
         setLoading(false);
       } catch (error) {
