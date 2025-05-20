@@ -33,3 +33,16 @@ export const BrandContainer = styled(Navbar.Brand)`
     color: #ffc107;
   }
 `;
+
+export const AppFooter = styled.footer`
+  background-color: #0c0c0c;
+  color: #f8f9fa;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+`;
