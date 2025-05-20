@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { Navbar, Card as BoostrapCard, Row, Button } from "react-bootstrap";
+import {
+  Navbar,
+  Card as BoostrapCard,
+  Row,
+  Button,
+  Container,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // Layout
@@ -170,5 +176,216 @@ export const HomePageButton = styled(Button)`
     background-color: #ccc;
     color: #666;
     cursor: not-allowed;
+  }
+`;
+
+// Movie Details Hero
+export const MovieHero = styled.div`
+  background-image: ${({ style }) => `url(${style})`};
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  position: relative;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 2rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+`;
+
+export const HeroContent = styled.div`
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+`;
+
+export const HeroTitle = styled.h1`
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffc107;
+  margin-bottom: 1rem;
+`;
+
+export const HeroGenres = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+`;
+
+export const HeroGenre = styled.span`
+  background-color: #343a40;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+`;
+
+export const HeroInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+`;
+
+export const HeroInfoReleaseDate = styled.div``;
+export const HeroInfoRuntime = styled.div``;
+export const HeroInfoRating = styled.div``;
+
+// Movie Details Container
+export const MovieContainer = styled.div`
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+`;
+
+export const MovieInfoSection = styled.div`
+  flex: 2;
+`;
+
+export const MovieOverview = styled.div`
+  margin-bottom: 2rem;
+`;
+
+export const MovieOverviewTitle = styled.h2`
+  font-size: 1.5rem;
+  color: #ffc107;
+  margin-bottom: 1rem;
+`;
+
+export const MovieOverviewText = styled.p`
+  text-align: justify;
+  color: rgb(23, 23, 23);
+  line-height: 1.6;
+`;
+
+export const MovieDetailsContainer = styled.div``;
+
+export const MovieDetailsTitle = styled.h3`
+  font-size: 1.25rem;
+  color: #ffc107;
+  margin-bottom: 1rem;
+`;
+
+export const MovieDetailsItem = styled.div`
+  display: flex;
+  gap: 1rem;
+  color: rgb(23, 23, 23);
+
+  strong {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+`;
+
+export const MovieRatingSection = styled.div`
+  flex: 1;
+  min-width: 250px;
+`;
+
+// Set Movie Rate
+// Movie Rating Styles
+export const RateContainer = styled.div`
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  color: #f8f9fa;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+`;
+
+export const RateTitle = styled.h4`
+  color: #ffc107;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+`;
+
+export const RateLabel = styled.label`
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f8f9fa;
+  margin-bottom: 0.5rem;
+  display: block;
+`;
+
+export const RateValue = styled.span`
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffc107;
+`;
+
+export const RateFormGroup = styled.div`
+  margin-bottom: 1.5rem;
+`;
+
+export const StyledFormRange = styled.input.attrs({ type: "range" })`
+  width: 100%;
+  margin-top: 0.75rem;
+  background: transparent;
+  -webkit-appearance: none;
+
+  &::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #ffc107;
+    border-radius: 5px;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    background: #ffc107;
+    border-radius: 50%;
+    margin-top: -5px;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    background: #ffc107;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &::-moz-range-track {
+    height: 6px;
+    background: #ffc107;
+    border-radius: 5px;
+  }
+`;
+
+export const StyledButton = styled.button`
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #ffc107;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, transform 0.2s;
+
+  &:hover {
+    background-color: #e0a800;
+    transform: scale(1.03);
+  }
+
+  &:active {
+    background-color: #d39e00;
   }
 `;
