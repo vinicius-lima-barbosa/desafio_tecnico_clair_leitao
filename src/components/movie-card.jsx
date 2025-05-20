@@ -6,15 +6,15 @@ import {
   MovieTitle,
   MovieMeta,
   MovieMetaRating,
+  MovieLink,
 } from "../styles/styled";
-import { Link } from "react-router-dom";
 
 const MOVIE_POSTER = import.meta.env.VITE_TMDB_API_MOVIE_IMAGE;
 
 const MovieCard = ({ movie }) => {
   return (
     <Col xs={6} sm={4} md={3} lg={2}>
-      <Link to={`/movie/${movie.id}`}>
+      <MovieLink to={`/movie/${movie.id}`}>
         <MovieCardStyled>
           <MovieImage
             src={MOVIE_POSTER + movie.poster_path}
@@ -30,7 +30,7 @@ const MovieCard = ({ movie }) => {
             </MovieMeta>
           </MovieInfo>
         </MovieCardStyled>
-      </Link>
+      </MovieLink>
     </Col>
   );
 };

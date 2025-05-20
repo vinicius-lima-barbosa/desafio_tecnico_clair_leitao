@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Navbar, Card as BoostrapCard, Row, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 // Layout
 export const AppNavbar = styled(Navbar)`
@@ -114,6 +115,10 @@ export const MovieMetaRating = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const MovieLink = styled(Link)`
+  text-decoration: none;
 `;
 
 // Home Page Movie List Styles
