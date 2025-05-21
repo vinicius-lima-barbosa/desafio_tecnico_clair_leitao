@@ -27,6 +27,8 @@ api.interceptors.response.use(
 
 export const tmdb = {
   getMovies: (page = 1) => api.get("/movie/popular", { params: { page } }),
+  getTopRatedMovies: (page = 1) =>
+    api.get("/movie/top_rated", { params: { page } }),
   getMovieDetails: (movieId) => api.get(`/movie/${movieId}`),
   postMovieRate: (movieId, value) =>
     api.post(
