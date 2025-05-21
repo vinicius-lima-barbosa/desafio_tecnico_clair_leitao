@@ -8,13 +8,27 @@ import {
   StyledButton,
 } from "../styles/styled";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
+import { tmdb } from "../api/tmdb";
 
 const SetMovieRate = ({ movie }) => {
-  const [rating, setRating] = useState(10);
+  const [rating, setRating] = useState(5);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(`Avaliação enviada: ${rating}/10`);
+
+    try {
+      const response = await tmdb.postMovieRate(movie.id, rating);
+      if (response.data.success) {
+        toast.success(`You rated ${movie.title} with ${rating}/10`);
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error.message || "An error occurred",
+        variant: "destructive",
+      });
+    }
   };
 
   return (

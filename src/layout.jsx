@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import Footer from "./components/footer";
 import Header from "./components/header";
 
@@ -7,6 +8,7 @@ const Layout = ({ children }) => {
       <Header />
       {children}
       <Footer />
+      <Toaster position="top-right" />
     </div>
   );
 };
