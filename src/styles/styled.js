@@ -238,10 +238,6 @@ export const HeroInfo = styled.div`
   font-size: 0.95rem;
 `;
 
-export const HeroInfoReleaseDate = styled.div``;
-export const HeroInfoRuntime = styled.div``;
-export const HeroInfoRating = styled.div``;
-
 // Movie Details Container
 export const MovieContainer = styled.div`
   max-width: 900px;
@@ -272,8 +268,6 @@ export const MovieOverviewText = styled.p`
   color: rgb(23, 23, 23);
   line-height: 1.6;
 `;
-
-export const MovieDetailsContainer = styled.div``;
 
 export const MovieDetailsTitle = styled.h3`
   font-size: 1.25rem;
