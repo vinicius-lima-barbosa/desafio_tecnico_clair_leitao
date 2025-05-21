@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const API_URL = import.meta.env.VITE_TMDB_API_URL;
+const API_ACCESS_TOKEN = import.meta.env.VITE_TMDB_ACCESS_TOKEN;
 
 const api = axios.create({
   baseURL: API_URL,
@@ -34,7 +35,7 @@ export const tmdb = {
       {
         headers: {
           "Content-Type": "application/json;charset=utf-8",
-          Authorization: `Bearer ${API_KEY}`,
+          Authorization: `Bearer ${API_ACCESS_TOKEN}`,
         },
       }
     ),
