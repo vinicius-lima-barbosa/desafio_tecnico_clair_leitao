@@ -131,9 +131,10 @@ export const MovieLink = styled(Link)`
 export const HomeTitle = styled.h1`
   font-size: 2rem;
   font-weight: bold;
-  color: #f8f9fa;
+  color: rgb(40, 39, 39);
   text-align: center;
   margin-bottom: 1.5rem;
+  margin-top: 1.2rem;
 `;
 
 export const HomeRow = styled(Row)`
