@@ -1,6 +1,6 @@
 # My Movies App
 
-<p>Um **front-end em React JS** que consome a API do TMDB para exibir filmes populares, top rated, detalhes e permite avaliação de filmes. Esse projeto foi criado com o intuito de demonstrar meus conhecimentos do framework e suas bibliotecas para o estágio da empresa Clair & Leitão.</p>
+Um **front-end em React JS** que consome a API do TMDB para exibir filmes populares, top rated, detalhes e permite avaliação de filmes. Esse projeto foi criado com o intuito de demonstrar meus conhecimentos do framework e suas bibliotecas para o estágio da empresa Clair & Leitão.
 
 
 ---
