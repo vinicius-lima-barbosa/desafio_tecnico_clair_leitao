@@ -23,20 +23,16 @@ const SetMovieRate = ({ movie }) => {
         toast.success(`You rated ${movie.title} with ${rating}/10`);
       }
     } catch (error) {
-      toast({
-        title: "Error",
-        description: error.message || "An error occurred",
-        variant: "destructive",
-      });
+      toast.error(error.message || "An error occurred");
     }
   };
 
   return (
     <RateContainer>
-      <RateTitle>Avalie este filme</RateTitle>
+      <RateTitle>Rate this movie</RateTitle>
       <form onSubmit={handleSubmit}>
         <RateFormGroup>
-          <RateLabel>Sua Avaliação:</RateLabel>
+          <RateLabel>Your rating:</RateLabel>
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
             <RateValue>{rating}</RateValue>
             <span style={{ color: "#ccc" }}>/10</span>
@@ -49,7 +45,7 @@ const SetMovieRate = ({ movie }) => {
             onChange={(e) => setRating(parseFloat(e.target.value))}
           />
         </RateFormGroup>
-        <StyledButton type="submit">Enviar</StyledButton>
+        <StyledButton type="submit">Rate</StyledButton>
       </form>
     </RateContainer>
   );
