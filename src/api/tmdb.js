@@ -27,4 +27,15 @@ api.interceptors.response.use(
 export const tmdb = {
   getMovies: (page = 1) => api.get("/movie/popular", { params: { page } }),
   getMovieDetails: (movieId) => api.get(`/movie/${movieId}`),
+  postMovieRate: (movieId, value) =>
+    api.post(
+      `/movie/${movieId}/rating`,
+      { value },
+      {
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+          Authorization: `Bearer ${API_KEY}`,
+        },
+      }
+    ),
 };
