@@ -28,14 +28,14 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    async function fetchMovie() {
+    const fetchMovie = async () => {
       try {
         const response = await tmdb.getMovieDetails(id);
         setMovie(response.data);
       } catch (error) {
         toast.error(error.message || "Erro ao buscar detalhes do filme");
       }
-    }
+    };
 
     fetchMovie();
   }, [id]);
