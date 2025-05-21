@@ -49,10 +49,10 @@ const Home = () => {
           onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
           disabled={page === 1}
         >
-          Página Anterior
+          Previous Page
         </HomePageButton>
         <HomePageButton onClick={() => setPage((prev) => prev + 1)}>
-          Próxima Página
+          Next Page
         </HomePageButton>
       </HomePageButtonContainer>
     </Container>
