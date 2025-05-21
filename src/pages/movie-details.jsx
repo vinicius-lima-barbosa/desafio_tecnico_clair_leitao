@@ -33,7 +33,7 @@ const MovieDetails = () => {
         const response = await tmdb.getMovieDetails(id);
         setMovie(response.data);
       } catch (error) {
-        toast.error(error.message || "Erro ao buscar detalhes do filme");
+        toast.error(error.message || "Erro while fetching movie details");
       }
     };
 

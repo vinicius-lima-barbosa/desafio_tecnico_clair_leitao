@@ -22,11 +22,7 @@ const Home = () => {
         setMovies(response?.data?.results || []);
         setLoading(false);
       } catch (error) {
-        toast({
-          title: "Error",
-          description: error.message || "An error occurred",
-          variant: "destructive",
-        });
+        toast.error(error.message || "An error occurred while fetching movies");
       }
     };
     fetchMovies();
