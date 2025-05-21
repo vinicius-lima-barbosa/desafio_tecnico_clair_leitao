@@ -291,8 +291,7 @@ export const MovieRatingSection = styled.div`
   min-width: 250px;
 `;
 
-// Set Movie Rate
-// Movie Rating Styles
+// Set Movie Rate Styles
 export const RateContainer = styled.div`
   background-color: #1c1c1c;
   padding: 1.5rem;
