@@ -14,7 +14,7 @@ export const AppNavbar = styled(Navbar)`
   padding: 1rem;
 
   .nav-link {
-    color: #ddd;
+    color: #f8f9fa;
     transition: color 0.3s;
     font-weight: bold;
     font-size: 1.5rem;
@@ -270,19 +270,26 @@ export const MovieOverviewText = styled.p`
   line-height: 1.6;
 `;
 
+export const MovieDetailsContainer = styled(Container)``;
+
 export const MovieDetailsTitle = styled.h3`
   font-size: 1.25rem;
   color: #ffc107;
-  margin-bottom: 1rem;
 `;
 
 export const MovieDetailsItem = styled(Container)`
   display: flex;
   gap: 1rem;
   color: rgb(23, 23, 23);
+  padding-left: 0;
 
   @media (max-width: 576px) {
     flex-direction: column;
+    gap: 0;
+  }
+
+  span {
+    font-weight: bold;
   }
 `;
 

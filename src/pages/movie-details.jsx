@@ -15,11 +15,11 @@ import {
   MovieOverview,
   MovieOverviewTitle,
   MovieOverviewText,
+  MovieDetailsContainer,
   MovieDetailsTitle,
   MovieDetailsItem,
   MovieRatingSection,
 } from "../styles/styled";
-import { Container } from "react-bootstrap";
 
 const IMAGE_POSTER = import.meta.env.VITE_TMDB_API_MOVIE_IMAGE;
 
@@ -75,14 +75,20 @@ const MovieDetails = () => {
             <MovieOverviewTitle>Overview</MovieOverviewTitle>
             <MovieOverviewText>{movie.overview}</MovieOverviewText>
           </MovieOverview>
-          <Container>
+          <MovieDetailsContainer>
             <MovieDetailsTitle>Details</MovieDetailsTitle>
             <MovieDetailsItem>
-              <strong>Language:</strong> {movie.original_language.toUpperCase()}
-              <strong>Budget:</strong> ${movie.budget.toLocaleString("pt-BR")}
-              <strong>Revenue:</strong> ${movie.revenue.toLocaleString("pt-BR")}
+              <p>
+                <span>Language:</span> {movie.original_language.toUpperCase()}
+              </p>
+              <p>
+                <span>Budget:</span> {movie.budget.toLocaleString("pt-BR")}
+              </p>
+              <p>
+                <span>Revenue:</span> {movie.revenue.toLocaleString("pt-BR")}
+              </p>
             </MovieDetailsItem>
-          </Container>
+          </MovieDetailsContainer>
         </MovieInfoSection>
         <MovieRatingSection>
           <SetMovieRate movie={movie} />
