@@ -240,7 +240,7 @@ export const HeroInfo = styled.div`
 `;
 
 // Movie Details Container
-export const MovieContainer = styled.div`
+export const MovieContainer = styled(Container)`
   max-width: 900px;
   margin: 0 auto 4rem;
   padding: 0 1rem;
@@ -250,11 +250,11 @@ export const MovieContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const MovieInfoSection = styled.div`
+export const MovieInfoSection = styled(Container)`
   flex: 2;
 `;
 
-export const MovieOverview = styled.div`
+export const MovieOverview = styled(Container)`
   margin-bottom: 2rem;
 `;
 
@@ -276,24 +276,23 @@ export const MovieDetailsTitle = styled.h3`
   margin-bottom: 1rem;
 `;
 
-export const MovieDetailsItem = styled.div`
+export const MovieDetailsItem = styled(Container)`
   display: flex;
   gap: 1rem;
   color: rgb(23, 23, 23);
 
-  strong {
-    display: block;
-    margin-bottom: 0.5rem;
+  @media (max-width: 576px) {
+    flex-direction: column;
   }
 `;
 
-export const MovieRatingSection = styled.div`
+// Set Movie Rate Styles
+export const MovieRatingSection = styled(Container)`
   flex: 1;
   min-width: 250px;
 `;
 
-// Set Movie Rate Styles
-export const RateContainer = styled.div`
+export const RateContainer = styled(Container)`
   background-color: #1c1c1c;
   padding: 1.5rem;
   border-radius: 0.75rem;
